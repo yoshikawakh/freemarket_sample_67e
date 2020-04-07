@@ -86,7 +86,7 @@ Things you may want to cover:
 |column|type|options|
 |------|----|-------|
 |prefecture|varchar|null: false|
-|address_id|integer|null: false,foregin_key:true|
+|address_id|integer|null: false,foreign_key:true|
 
 ### Association
 - has_many: address
@@ -99,7 +99,7 @@ Things you may want to cover:
 |month_data|int|null: false|
 |year_data|int|null: false|
 |security_code|varchar|null: false|
-|user_id|integer|null: false,foregin_key: true|
+|user_id|integer|null: false,foreign_key: true|
 
 ### Asociation
 - belongs_to :users
@@ -109,8 +109,8 @@ Things you may want to cover:
 |column|type|options|
 |------|----|-------|
 |text|text|null: false|
-|user_id|integer|null: false, foregin_key: true|
-|product_id|integer|null :false, foregin_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|product_id|integer|null :false, foreign_key: true|
 
 ### Association
 - belongs_to :users
@@ -120,7 +120,7 @@ Things you may want to cover:
 |column|type|options|
 |------|----|-------|
 |prefecture|varchar|null: false|
-|address_id|integer|null: false,foregin_key:true|
+|address_id|integer|null: false,foreign_key:true|
 
 ### Association
 - has_many: address
