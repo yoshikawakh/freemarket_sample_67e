@@ -13,6 +13,7 @@ rules:
       - Signup via GitHub
 
   # You can have *justification* to explain the exceptional cases.
+  - id: example.localStorage
     pattern:
       token: localStorage
     message: |
