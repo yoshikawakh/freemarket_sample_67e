@@ -56,19 +56,16 @@ a{
 
 .main_menu{
     height:800px;
-    width: 100%;
+    width: calc( 100vw - 300px);
     background-color: #FFFFFF;
     position: absolute;
     flex: 1 1 auto;
     margin-left: 300px;
     border-top:solid #272727;
     display: flex;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 .main_footer{
     display: flex;
