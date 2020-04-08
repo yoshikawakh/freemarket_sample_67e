@@ -103,3 +103,4 @@
 |product_id|string|null:, foreign_key:true|
 
 ### Association
+belongs_to: product
