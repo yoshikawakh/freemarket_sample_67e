@@ -28,6 +28,7 @@
 |city|varchar|null: false|
 |city_block|varchar|null :false|
 |building|varchar|null :false|
+|prefecture|varchar|null :false|
 |user_id|integer|null :false,foreign_key:true|
 
 ### Association
@@ -102,4 +103,3 @@
 |product_id|string|null:, foreign_key:true|
 
 ### Association
-- belongs_to: product
