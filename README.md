@@ -1,30 +1,4 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # freemarket_sample_67e DB設計
-
 
 ## usersテーブル
 
@@ -43,29 +17,8 @@ Things you may want to cover:
 ### Association
 - has_many :address
 - has_many :creditcards
-- has_many :messages, through: :users_messages
 - has_mamy :comments
 - has_many :products
-
-
-## user_messagesテーブル
-|column|type|options|
-|------|----|-------|
-|user_id|string|null: false,foreign_key:true|
-|message_id|string|null: false,foreign_key:true|
-
-### Association
-- belongs_to :users
-- belongs_to :messages
-
-
-## messagesテーブル
-|column|type|options|
-|------|----|-------|
-|messages_text|text|null: false|
-
-### Asociation
-- has_many: users,through: :users_messages
 
 
 ## addressテーブル
@@ -78,8 +31,7 @@ Things you may want to cover:
 |user_id|integer|null :false,foreign_key:true|
 
 ### Association
-- belongs_to :users
-- belongs_to :prefectures
+- belongs_to :user
 
 
 ## creditcardsテーブル
@@ -91,8 +43,8 @@ Things you may want to cover:
 |security_code|varchar|null: false|
 |user_id|integer|null: false,foreign_key: true|
 
-### Asociation
-- belongs_to :users
+### Association
+- belongs_to :user
 
 
 ## commentsテーブル
@@ -103,23 +55,14 @@ Things you may want to cover:
 |product_id|integer|null :false, foreign_key: true|
 
 ### Association
-- belongs_to :users
-- belongs_to :products
-
-## prefecturesテーブル
-|column|type|options|
-|------|----|-------|
-|prefecture|varchar|null: false|
-|address_id|integer|null: false,foreign_key:true|
-
-### Association
-- has_many: address
+- belongs_to :user
+- belongs_to :product
 
 
 ## productsテーブル
 |column|type|options|
 |------|----|-------|
-|products_name|varchar|null: false|
+|product_name|varchar|null: false|
 |price|int|null: false|
 |size|varchar||
 |status|varchar||
@@ -130,23 +73,11 @@ Things you may want to cover:
 |arrival_date|int|null: false|
 |brand|varchar||
 
-### Asociation
-- belongs_to :users
+### Association
+- belongs_to :user
 - has_mamy :comments
 - has_many :images
-- has_many :categories,through: :products_categories
-
-
-## products_categoriesテーブル
-|column|type|options|
-|------|----|-------|
-|product_id|string|null: false,foreign_key:true|
-|category_id|string|null: false,foreign_key:true|
-
-### Association
-- belongs_to :products
-- belongs_to :categories
-
+- belongs_to :category
 
 
 ## categoriesテーブル
@@ -161,7 +92,7 @@ Things you may want to cover:
 |other|varchar||
 
 ### Association
-- has_mamy: products,though: :products_categories
+- has_mamy: products
 
 
 ## imagesテーブル
@@ -170,6 +101,5 @@ Things you may want to cover:
 |image|string|null: false|
 |product_id|string|null:, foreign_key:true|
 
-
 ### Association
-belongs_to: products
+- belongs_to: product
