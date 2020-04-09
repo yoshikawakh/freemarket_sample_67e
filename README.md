@@ -1,34 +1,4 @@
-
-
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 # freemarket_sample_67e DB設計
-
 
 ## usersテーブル
 
@@ -89,10 +59,11 @@ Things you may want to cover:
 - belongs_to :user
 - belongs_to :product
 
+
 ## productsテーブル
 |column|type|options|
 |------|----|-------|
-|products_name|varchar|null: false|
+|product_name|varchar|null: false|
 |price|int|null: false|
 |size|varchar||
 |status|varchar||
@@ -124,12 +95,12 @@ Things you may want to cover:
 ### Association
 - has_mamy: products
 
+
 ## imagesテーブル
 |column|type|options|
 |------|----|-------|
 |image|string|null: false|
 |product_id|string|null:, foreign_key:true|
-
 
 ### Association
 belongs_to: product
