@@ -14,7 +14,6 @@
 .accounts_contents{
     display: flex;
     position: absolute;
-    display: inline-block;
     overflow: scroll;
 
 }
@@ -65,7 +64,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
 }
 .main_footer{
     display: flex;
