@@ -380,7 +380,7 @@
                   margin:-35px 0px 0px -55px;
                 }
               }
-               &__image {
+              &__image {
                 top: 0;
                 left: 0;
                 right: 0;
@@ -401,7 +401,7 @@
                 font-size: 16px;
                 text-align: left;
               }
-           &__date {
+          &__date {
                 font-size: 16px;
                 ul {
                   display: flex;
@@ -649,7 +649,6 @@
       #item_status {
         height: 50px;
         width: calc(100vw - 800px);
-        
       }
     }
 
@@ -757,8 +756,6 @@
         }
       }
       &__comm {
-        // border-top: solid gray;
-        
         display: flex;
         justify-content: space-between;
         padding: 30px 0 30px 0;
@@ -771,11 +768,9 @@
         display: flex;
         justify-content: space-between;
         &__name {
-          // margin-left: 170px;
           width: calc(100vw - 580px);
         }
         &__2 {
-          // margin-left: 340px;
         }
       }
     }
