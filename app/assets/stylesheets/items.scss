@@ -22,7 +22,6 @@
     font-size: 18px;
     text-decoration: none;
     margin-bottom: 5px;
-
   }
   width: 120px;
   background: #3CCACE;
@@ -36,7 +35,6 @@
 .header {
   padding: 0 60px;
   width: 100%;
-
   &__box {
     padding: 15px 0 0 ;
     max-width: 1040px;
@@ -121,7 +119,6 @@
   width: 100%;
   &__box1 {
     background-image: image-url("pict/bg-mainVisual-pict_pc.jpg");
-    // background-image: url(/assets/bg-mainVisual-pict_pc-a1a4be0….jpg);
     height: 550px;
     width: 100%;
     background-size: cover;
@@ -157,7 +154,6 @@
         &__google {
           margin-top: 10px;
         }
-
       }
     }
   }
@@ -172,7 +168,6 @@
       margin-bottom: 25px;
       padding-bottom: 15px;
       position: relative;
-
     }
     h2::after {
       content: "";
@@ -190,7 +185,6 @@
       max-width: 1020px;
       width: 100%;
       margin: 0 auto;
-
       &__box1 {
         width: 30%;
         margin: 16px 5% 0 0;
@@ -267,8 +261,7 @@
         }
       }
     }
-    background-position: bottom right
-
+    background-position: bottom right;
   }
   &__box4 {
     padding: 60px 20px;
@@ -353,7 +346,6 @@
         display: flex;
         justify-content: space-around;
         display: contents;
-
         &__product {
           width: 220px;
           display: inline-block;
@@ -412,9 +404,7 @@
                   font-size: 10px;
                   text-align: left;
                 }
-
               }
-
           }
         }
       }
@@ -736,7 +726,6 @@
         padding-bottom: 10px;
         &__cname {
           margin-top: 20px;
-          // padding-right: 370px;
           width: calc(100vw - 500px);
 
         }
@@ -828,46 +817,46 @@
     }
   }
 }
-  .exhibitions {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 10px;
-    margin: 40px 300px 0 300px;
+.exhibitions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 10px;
+  margin: 40px 300px 0 300px;
+  text-decoration: none;
+  &__prvert {
+    &__1 {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  &__merukari {
     text-decoration: none;
-    &__prvert {
-      &__1 {
-        text-decoration: none;
-        color: black;
-      }
-    }
-    &__merukari {
+    color: black;
+    &__1 {
       text-decoration: none;
       color: black;
-      &__1 {
-        text-decoration: none;
-        color: black;
-      }
     }
-    &__terg {
+  }
+  &__terg {
+    text-decoration: none;
+    color: black;
+    &__1 {
       text-decoration: none;
       color: black;
-      &__1 {
-        text-decoration: none;
-        color: black;
-      }
     }
   }
-  .logs {
-    text-align: center;
-    &__ima {
-      margin-top: 30px;
-    }
-    &__furim {
-      color: gray;
-    }
-    &__last {
-      margin-bottom: 40px;
-      font-size: 10px;
-    }
+}
+.logs {
+  text-align: center;
+  &__ima {
+    margin-top: 30px;
   }
+  &__furim {
+    color: gray;
+  }
+  &__last {
+    margin-bottom: 40px;
+    font-size: 10px;
+  }
+}
