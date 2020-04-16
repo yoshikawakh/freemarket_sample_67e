@@ -15,7 +15,7 @@
         %span.form_item__require 必須
       %div.form_input__expiration__date
         .card__month
-          = select_tag 'creditcard[month_data]', options_for_select(["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]),class:'expiration__date'
+          = select_tag 'creditcard[month_data]', options_for_select(["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]),class:'expiration__date'
         .card__month__and__year 月
         .card__year
           = select_tag 'creditcard[year_data]', options_for_select(["20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]),class:'expiration__date'
