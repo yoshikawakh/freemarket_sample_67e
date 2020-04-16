@@ -101,7 +101,6 @@
       &__login {
         ul {
           display: flex;
-
           li {
             padding-left: 16px;
             a {
@@ -758,8 +757,6 @@
         justify-content: space-between;
         &__name {
           width: calc(100vw - 580px);
-        }
-        &__2 {
         }
       }
     }
