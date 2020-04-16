@@ -329,11 +329,11 @@
       text-align: center;
       padding-bottom: 26px;
       &__title {
-        a {
-          font-size: 24px;
-          text-decoration: none;
-          color: #3CCACE;
-        }
+        // a {
+        //   font-size: 24px;
+        //   text-decoration: none;
+        //   color: #3CCACE;
+        // }
         h3 {
           font-weight: bold;
         }
@@ -490,7 +490,11 @@
     font-size: 14px;
   }
 }
-
+.main__box5__box__title a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #3CCACE;
+}
 
 
 
