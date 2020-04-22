@@ -1,2 +1,147 @@
-%h1 Products#new
-%p Find me in app/views/products/new.html.haml
+.produt-header
+  = render 'header'
+
+.wrapper
+  .sell-form
+    .sell-form__image
+      %h3.sell-form__image--head
+        出品画像
+        %span.form-require
+          必須
+      %p.sell-form__image__max10-upload
+        最大10枚までアップロードできます
+      .sell-form__image__dropbox
+        %p.sell-form__image__dropbox__icon
+          = icon('fas', 'camera')
+        %p.sell-form__image__dropbox__content
+          ドラッグアンドドロップ 
+          %br
+          またはクリックしてファイルをアップロード
+
+    .sell-form__content
+      .form-group
+        %label
+          商品名
+          %span.form-require 必須
+        .icon-wrap
+          %input.sell-form__sample{placeholder: '40文字まで'}
+            = icon('fas', 'angle-down')
+      .form-group
+        %label
+          商品の説明
+          %span.form-require 必須
+        %div
+          %textarea{placeholder: "商品の説明(必須 1,000文字以内)                                                             (色、素材、重さ、定価、注意点など)                                                例)2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", class: "sell-form__description"}
+
+    .sell-form__content
+      %h3.sell-form__summary
+        商品の詳細
+      .sell-form__status
+        .sell-form__item
+          %label
+            カテゴリー
+            %span.form-require
+              必須
+          .icon-wrap
+            %input.sell-form__selection{placeholder: "選択してください"}
+              = icon('fas', 'angle-down')
+        .sell-form__item
+          %label
+            ブランド
+            %span.form-arbitrary 任意
+          .select-wrap
+            %input.sell-form__sample{placeholder: "例) シャネル"}
+            
+        .sell-form__item-status
+          %label
+            商品の状態
+            %span.form-require 必須
+          .icon-wrap
+            %input.sell-form__selection{placeholder: "選択してください"}
+              = icon('fas', 'angle-down')
+    .sell-form__content
+      %span.sell-form__summary 配送について
+      %span.form-question ?
+      .sell-form__send
+        .form-group
+          %label
+            配送料の負担
+            %span.form-require 必須
+          .icon-wrap
+            %input.sell-form__selection{placeholder: "選択してください"}
+              = icon('fas', 'angle-down')
+        .form-group
+          %label
+            発送元の地域
+            %span.form-require 必須
+          .icon-wrap
+            %input.sell-form__selection{placeholder: "選択してください"}
+              = icon('fas', 'angle-down')
+        .form-group
+          %label
+            発送までの日数
+            %span.form-require 必須
+          .icon-wrap
+            %input.sell-form__selection{placeholder: "選択してください"}
+              = icon('fas', 'angle-down')
+    .sell-form__content
+      %span.sell-form__summary 販売価格(¥300~9,999,999)
+      %span.form-question ?
+      .sell-form__box
+        .sell-price
+          .form-group
+            .form-group__price
+              %label.li-left
+                販売価格
+                %span.form-require 必須
+              .li-right.sell-price__input
+                %p.price-mark
+                  ¥
+                  %span.input-price
+                    %input.price{placeholder:"0"}
+                    
+          .sell-price__commission
+            .sell-price__commission__ratio
+              販売手数料（10%）
+              %span.sell-price__box
+                ー
+          .sell-price__profit
+            .l-left.profit
+              販売利益
+              %span.total-right.profits
+                ー
+
+      .sell-form__btn
+        .btn-red
+          = link_to '出品する', class: "btn-red"
+        .btn-gray
+          = link_to '下書きに保存', class: "btn-gray"
+        .btn-blue
+          = link_to "もどる", class: "btn-blue"
+
+        %p.precautions
+          %span.black-font 
+            禁止されている
+          %span.blue-font
+            行為
+          %span.black-font
+            および
+          %span.blue-font
+            出品物
+          %span.black-font
+            を必ずご確認ください。
+          %span.blue-font
+            偽ブランド品
+          %span.black-font
+            や
+          %span.blue-font
+            盗品物
+          %span.black-font
+            などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
+          %span.blue-font
+            加盟店規約
+          %span.black-font
+            に同意したことになります。
+
+.produt-footer
+  = render 'footer'
