@@ -1,0 +1,38 @@
+.main_header
+.signup_page
+  .new_title 送付先住所情報登録
+  = form_for @address do |f|
+    = render "devise/shared/error_messages", resource: @address
+    .field
+      = f.label :郵便番号
+      %span.form_require 必須
+      %br/
+      = f.text_field :zipcode, class: "input_box"
+    .field
+      = f.label :都道府県
+      %span.form_require 必須
+      %br/
+      = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+      %br/
+    .field
+      = f.label :市区町村
+      %span.form_require 必須
+      %br/
+      = f.text_field :city, class: "input_box"
+    .field
+      = f.label :番地
+      %span.form_require 必須
+      %br/
+      = f.text_field :block, class: "input_box"
+    .field
+      = f.label :"マンション名,ビル名 部屋番号"
+      %br/
+      = f.text_field  :building, class: "input_box"
+    .field
+      = f.label :電話番号
+      %span.form_require 必須
+      %br/
+      = f.text_field :phone_number, class: "input_box"
+    .actions
+      = f.submit "完了", class: "red_btn"
+.main_footer
