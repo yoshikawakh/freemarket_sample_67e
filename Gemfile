@@ -74,3 +74,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'payjp'
 gem 'font-awesome-sass'
+gem 'haml-rails'
+gem 'devise'
+gem 'active_hash'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'pry-rails'
+
