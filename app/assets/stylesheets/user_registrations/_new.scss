@@ -31,58 +31,70 @@ body{
       margin-top: 32px;
       }
       
-      .form_require{
-        background: #ea352d;
-        color: #ffffff;
-        margin: 0 8px;
-        padding: 2px 4px;
-        border-radius: 2px;
-        vertical-align: top;
-        
-      }
+    .form_require{
+      background: #ea352d;
+      color: #ffffff;
+      margin: 0 8px;
+      padding: 2px 4px;
+      border-radius: 2px;
+      vertical-align: top;
       
-      .user_nickname{
-        width: 100%;
-        margin: 8px 0 0;
-      }
-      
-      .form_control{
-        height: 30px;
-        width: 26%;
+    }
+    
+    .user_nickname{
+      width: 100%;
+      margin: 8px 0 0;
+    }
+    
+    .form_control{
+      height: 30px;
+      width: 26%;
 
-      }
+    }
 
-      .input_box{
+    .input_box{
+      height: 30px;
+      width: 80%;
+      border-radius: 5px;
+      margin-top: 5px;
+
+      &__half{
         height: 30px;
-        width: 80%;
+        width: 40%;
         border-radius: 5px;
         margin-top: 5px;
 
-        &__half{
-          height: 30px;
-          width: 40%;
-          border-radius: 5px;
-          margin-top: 5px;
-
-        }
       }
+    }
+    
+    #user_birth_date_1i {
+      height: 30px;
+      width: 26%;
       
-      .user_birth_date_1i{
-        padding: 10px;
-        line-height: center;
+    }
+
+    #user_birth_date_2i {
+      height: 30px;
+      width: 26%;
+      
+    }
+
+    #user_birth_date_3i {
+      height: 30px;
+      width: 26%;
+      
+    }
+
+    .actions{
+      margin-top: 32px;
+      
+      .red_btn{
+        line-height: 48px;
+        background-color: #ea352d;
+        color: #FFFFFF;
+        width: 80%;
 
       }
-
-      .actions{
-        margin-top: 32px;
-        
-        .red_btn{
-          line-height: 48px;
-          background-color: #ea352d;
-          color: #FFFFFF;
-          width: 80%;
-
-        }
     }
   }
 }

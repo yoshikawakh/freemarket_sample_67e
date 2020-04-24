@@ -3,44 +3,50 @@
   padding: 24px 16px 40px;
   width: 350px;
   margin: auto;
-
+  
   .field{
     margin-top: 32px;
+  }
     
-    .form_require{
-      background: #ea352d;
-      color: #ffffff;
-      margin: 0 8px;
-      padding: 2px 4px;
-      border-radius: 2px;
-      vertical-align: top;
-      
-    }
+  .form_require{
+    background: #ea352d;
+    color: #ffffff;
+    margin: 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    vertical-align: top;
     
-    .user_nickname{
-      width: 100%;
-      margin: 8px 0 0;
-    }
-    
-    .form_control{
-      height: 30px;
-      width: 26%;
+  }
+  
+  .user_nickname{
+    width: 100%;
+    margin: 8px 0 0;
+  }
+  
+  .form_control{
+    height: 30px;
+    width: 26%;
 
-    }
-    .input_box{
+  }
+  .input_box{
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    margin-top: 5px;
+
+    &__half{
       height: 30px;
-      width: 80%;
+      width: 40%;
       border-radius: 5px;
       margin-top: 5px;
 
-      &__half{
-        height: 30px;
-        width: 40%;
-        border-radius: 5px;
-        margin-top: 5px;
-
-      }
     }
+  }
+
+  #address_prefecture_id{
+    height: 30px;
+    width: 40%;
+
   }
 
   .actions{

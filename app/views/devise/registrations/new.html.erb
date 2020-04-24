@@ -24,8 +24,8 @@
       <%= f.text_field :last_name_kana, class: "input_box__half"%>
     </div>
 
-      <div class="field">
-      <%= f.label :生年月日 %><span class = form_require>必須</span><br />
+    <div class="field">
+      <%= f.label :生年月日 %><span class="form_require">必須</span><br />
       <%= f.date_select :birth_date, use_month_numbers: true,start_year: 1930, end_year: (Time.now.year - 10), default: Date.new(1989, 1, 1) %>
     </div>
 
