@@ -38,9 +38,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
       render :new_address and return
     end
     @user.build_address(@address.attributes)
-    @user.save
-    session["devise.regist_data"]["user"].clear
-    sign_in(:user, @user)
+    
+    unless @user.save
+      render :new_address and return
+    else
+      session["devise.regist_data"]["user"].clear
+      sign_in(:user, @user)
+    end
   end
 
   # GET /resource/edit
