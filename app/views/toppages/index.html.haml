@@ -16,9 +16,22 @@
     .header__box__2
       .header__box__2__content
         %ul
-          %li
-            = link_to root_path do
-              カテゴリー
+          -# %li
+          -#   = link_to root_path do
+
+-# view  
+-#     %ul  
+-#         - @categories.each do |category1|  
+-#             %li  
+-#                 = category1.name  
+-#                 %ul  
+-#                     - category1.children.each do |category2|  
+-#                         %li  
+-#                             = category2.name  
+-#                             %ul  
+-#                                 - category2.children.each do |category3|  
+-#                                     %li  
+-#                                         = category3.name  
             
           %li
             = link_to root_path do
