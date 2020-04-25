@@ -26,6 +26,10 @@ body{
     padding: 24px 16px 40px;
     width: 350px;
     margin: auto;
+
+    .confirmation{
+      width: 80%;
+    }
     
     .field{
       margin-top: 32px;
@@ -42,7 +46,7 @@ body{
     }
     
     .user_nickname{
-      width: 100%;
+      width: 80%;
       margin: 8px 0 0;
     }
     
