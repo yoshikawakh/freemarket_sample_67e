@@ -4,18 +4,17 @@
 
 |column|type|options|
 |------|----|-------|
-|nickname|varchar|null: false|
-|e-mail|varchar|null: false|
-|password|varchar|null: false|
-|first_name|varchar|null: false|
-|first_name_kana|varchar|null: false|
-|last_name|varchar|null: false|
-|last_name_kana|varchar|null: false|
+|nickname|string|null: false|
+|first_name|string|null: false|
+|first_name_kana|string|null: false|
+|last_name|string|null: false|
+|last_name_kana|string|null: false|
 |birthday|date|null: false|
-|phone_number|varchar|null: false|
+|e-mail|string|null: false|
+|password|string|null: false|
 
 ### Association
-- has_many :address
+- has_one :address
 - has_many :creditcards
 - has_mamy :comments
 - has_many :products
@@ -24,11 +23,12 @@
 ## addressテーブル
 |column|type|options|
 |------|----|-------|
-|postcode|varchar|null: false|
-|city|varchar|null: false|
-|city_block|varchar|null :false|
-|building|varchar|null :false|
-|prefecture|varchar|null :false|
+|zipcode|integer|null: false|
+|prefecture|integer|null: false|
+|city|string|null :false|
+|block|string|null :false|
+|building|string||
+|phone_number|string|null :false|
 |user_id|integer|null :false,foreign_key:true|
 
 ### Association
@@ -38,10 +38,10 @@
 ## creditcardsテーブル
 |column|type|options|
 |------|----|-------|
-|card_number|varchar|null: false|
+|card_number|string|null: false|
 |month_data|int|null: false|
 |year_data|int|null: false|
-|security_code|varchar|null: false|
+|security_code|string|null: false|
 |user_id|integer|null: false,foreign_key: true|
 
 ### Association
@@ -63,16 +63,16 @@
 ## productsテーブル
 |column|type|options|
 |------|----|-------|
-|product_name|varchar|null: false|
+|product_name|string|null: false|
 |price|int|null: false|
-|size|varchar||
-|status|varchar||
-|postage|varchar|null: false|
+|size|string||
+|status|string||
+|postage|string|null: false|
 |explanation|text||
 |delivery_method|text||
-|delivery_origin|varchar|null: false|
+|delivery_origin|string|null: false|
 |arrival_date|int|null: false|
-|brand|varchar||
+|brand|string||
 
 ### Association
 - belongs_to :user
@@ -84,13 +84,13 @@
 ## categoriesテーブル
 |column|type|options|
 |------|----|-------|
-|ladies|varchar||
-|mens|varchar||
-|baby_kids|varchar||
-|interior|varchar||
-|book|varchar||
-|ticket|varchar||
-|other|varchar||
+|ladies|string||
+|mens|string||
+|baby_kids|string||
+|interior|string||
+|book|string||
+|ticket|string||
+|other|string||
 
 ### Association
 - has_mamy: products
