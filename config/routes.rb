@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root to: 'toppages#index'
-  resources :users, only: [:index]
+  resources :users, only: [:index] do
+    collection do
+      get 'logout'
+    end
+  end
   resources :creditcards, only: [:new]
   resources :products, only: [:new]
 end

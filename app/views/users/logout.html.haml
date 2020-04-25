@@ -3,5 +3,5 @@
   %p.users_contents
     = render "users/side_bar"
   %div.main_menu
-    = link_to "ログアウト", "#", method: :delete, class: 'logout-btn'
+    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'logout-btn'
   = render "users/main_footer"
