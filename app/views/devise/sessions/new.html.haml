@@ -1,3 +1,4 @@
+= render "products/header"
 .signup_page
   .new_title ログイン
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
@@ -16,3 +17,4 @@
     .actions
       = f.submit "ログイン", class: "red_btn"
   = render "devise/shared/links"
+= render "products/footer"
