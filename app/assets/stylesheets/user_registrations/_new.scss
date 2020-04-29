@@ -9,7 +9,6 @@ body{
   height:1000px;
   width: 700px;
   margin: auto;
-  margin-top: 100px;
   font-weight: 300;
   
   
@@ -101,6 +100,25 @@ body{
       }
     }
   }
+}
+.edit_btn{
+  height: 30px;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 30px;
+  margin: auto;
+  .new_registration{
+    background-color: #3CCACE;
+    color: #ffffff;
+    padding: 0 10px;
+  }
+  .new_password{
+    background-color: #3CCACE;
+    color: #ffffff;
+
+  }
+
 }
 
 a{

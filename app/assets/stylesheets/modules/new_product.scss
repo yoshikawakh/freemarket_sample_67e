@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 
-.produt-header{
+.product-header{
   background-color: #f8f8f8;
   height: 128px;
   text-align: center;
   h1 {
     margin: 40px 0 0;
     display: inline-block;
-    .produt-header__icon__image {
+    .product-header__icon__image {
       width: 185px;
       height: 49px;
       line-height: 49px;
@@ -295,7 +295,7 @@
   }
 }
 
-.produt-footer {
+.product-footer {
   background-color: #f8f8f8;
   height: 180px;
   text-align: center;

@@ -1,4 +1,4 @@
-.main_header
+= render "products/header"
 .signup_page
   .new_title 会員情報入力
   = form_for(@user, as: resource_name, url: registration_path(resource_name)) do |f|
@@ -48,4 +48,4 @@
       = f.password_field :password_confirmation, :placeholder=>"同じパスワードを入力して下さい", autocomplete: "new-password", class: "input_box"
     .actions
       = f.submit "次へ進む", class: "red_btn"
-.main_footer
+= render "products/footer"
