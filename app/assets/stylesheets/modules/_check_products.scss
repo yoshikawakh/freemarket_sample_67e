@@ -5,40 +5,68 @@
     text-align: center;
     width: 400px;
     padding: 5px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
-.product__check__container{
-    display: inline-flex;
-    text-align: center;
-    height: 100px;
-    width: 400px;
-    &__01{
-        display: flex;
-        justify-content: space-between;
-        height: 100px;
+.product{
+    &__check{
+        &__container{
+            display: inline-flex;
+            text-align: center;
+            height: 100px;
+            width: 400px;
+              &__01{
+                display: flex;
+                justify-content: space-between;
+                height: 100px;
+              }
+              &__02{
+                height: 100px;
+                text-align: left;
+                font-size: 15px;
+              }
+        }
+        &__content{
+           font-weight: bold;
+        }
+        &__title{
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            font-weight: bold;
+        }
     }
-    &__02{
-        height: 100px;
-        text-align: left;
-        font-size: 15px;
-
+    &__image{
+      height: 90px;
+      width: 90px;
     }
-
+    &__title{
+      font-size: 15px;
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+    }
+    &__price{
+        &__mini{
+          font-size: 15px;
+          margin-top: 10px;
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          font-weight: bold;
+        }
+        &__normal{
+          line-height: 100px;
+          font-size: 25px;
+          font-weight: bold;
+        }
+    }
+    &__register__content{
+        color: skyblue;
+    }
 }
 
-.product__check__title{
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    font-weight: bold;
-}
-.product__image{
-    height: 90px;
-    width: 90px;
-    background-color: blue;
-}
 .right__content{
     display: flex;
     position: relative;
@@ -46,67 +74,11 @@
     text-align: left;
     margin-left: 20px;
 }
-.product__title{
-    font-size: 15px;
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-}
-.product__price__mini{
-    font-size: 15px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: flex-start;
-    text-align: left;
-    font-weight: bold;
-}
-
-.product__price__normal{
-    line-height: 100px;
-    font-size: 25px;
-    font-weight: bold;
-}
-.product__check__content{
-    font-weight: bold;
-}
-.product__register__content{
-    color: skyblue;
-}
 
 .to_buy_btn{
     width: 400px;
     height: 40px;
     line-height: 40px;
     background-color: #3CCACE;
-    color: white;
+    color: #ffffff;
 }
-
-
-
-// .product__check{
-//     &__container{
-//         width: 400px;
-//         height: 70px;
-//     }
-
-// .product__image{
-//     width: 60px;
-//     height: 60px;
-// }    
-    
-// //     __container 
-// //   .product__check__title 購入内容の確認
-// // .product__check__container
-// //   .product__image
-// //   .product__title ルイヴィトン　ダミエ　ドゥオモ　ハンドバッグ
-// //   .product__price__mini ￥47,200 (税込) 送料込み
-// // .product__check__container
-// //   .product__price__left 支払い金額
-// //   .product__price__right ￥47,200
-// // .product__check__container
-// //   .product__check__content 支払い方法
-// //   .product__register__content 登録してください
-// // .product__check__container
-// //   .product__check__content 配送先
-// //   .product__register__content 登録してください
-// // = link_to "購入する", "#", class: 'to_buy_btn'
