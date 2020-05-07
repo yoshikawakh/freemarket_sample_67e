@@ -3,9 +3,7 @@ class ProductsController < ApplicationController
   end
 
   def buy
-    @user = current_user
-    # @creditcard = Creditcard.where(uer_id: current_user.id).first
-    @address = Address.where(user_id: current_user.id).first
+    @address = Address.find_by(user_id: current_user.id)
     @product = Product.find(1)
 
     payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
