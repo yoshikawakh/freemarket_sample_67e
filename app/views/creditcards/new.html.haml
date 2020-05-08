@@ -1,5 +1,5 @@
 .wrapper
-  = render "users/main_header"
+  = render "products/header"
   %p.users_contents
     = render "users/side_bar"
 
@@ -7,7 +7,7 @@
     %div.register_creditcard_container_form
       %h1.form_title クレジットカード登録情報
       .title__container
-        %label.form_item カード番号  
+        %label.form_item カード番号
         %span.form_item__require 必須
       %input.form_item__input__box__creditcard{placeholder:"  半角数字のみ"}
       %div.title__container
@@ -27,4 +27,3 @@
       %div.form_item__hint カード裏面の番号とは？
       %div.form__add__creditcard__btn
         %button.add__creditcard__btn 追加する
-  = render "users/main_footer"
