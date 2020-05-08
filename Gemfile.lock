@@ -114,8 +114,6 @@ GEM
     devise-i18n-views (0.3.7)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dropzonejs-rails (0.8.4)
-      rails (> 3.1)
     erb2haml (0.1.5)
       html2haml
     erubi (1.9.0)
@@ -356,7 +354,6 @@ DEPENDENCIES
   devise
   devise-i18n
   devise-i18n-views
-  dropzonejs-rails
   erb2haml
   fog-aws
   font-awesome-sass
