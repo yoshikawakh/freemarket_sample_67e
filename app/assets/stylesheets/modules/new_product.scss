@@ -40,37 +40,36 @@
         font-weight: 600;
       }
       &__max10-upload {
-        margin-top: 16px;
+        margin: 16px 0;
       }
       &__dropbox {
-        align-content: center;
-        -webkit-box-align: center;
-        align-items: center;
-        background-color: rgb(245, 245, 245);
-        cursor: pointer;
-        display: flex;
-        height: 150px;
-        flex-wrap: wrap;
-        -webkit-box-pack: center;
-        justify-content: center;
-        position: relative;
-        border-width: 1px;
-        border-style: dashed;
-        border-color: rgb(204, 204, 204);
-        border-image: initial;
-        transition: all 0.5s ease-out 0s;
-        margin: 16px 4px 0 ;
-        &__icon {
-          height: 24px;
-          margin-bottom: 8px;
-          width: 24px;
-          font-size:20px;
+        margin-bottom: 8px;
+          font-size:12px;
+          text-align: center;
+        &__label {
+          align-content: center;
+          -webkit-box-align: center;
+          align-items: center;
+          background-color: rgb(245, 245, 245);
+          cursor: pointer;
+          display: flex;
+          height: 150px;
+          flex-wrap: wrap;
+          -webkit-box-pack: center;
+          justify-content: center;
+          position: relative;
+          border-width: 1px;
+          border-style: dashed;
+          border-color: rgb(204, 204, 204);
+          border-image: initial;
+          transition: all 0.5s ease-out 0s;
         }
         &__content {
           font-size: 12px;
           line-height: 1.4em;
           text-align: center;
           width: 100%;
+
         }
       }
     }
@@ -82,8 +81,11 @@
     }
     .sell-form__item {
       margin-bottom: 30px;
+      label {
+        font-weight: 600;
+      }
     }
-
+    
     .sell-form__sample {
       position: relative;
       border: 1px solid #ccc;
@@ -98,11 +100,7 @@
       width: 100%;
       margin-top: 16px;
     }
-    .sell-form__status {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.4em;
-    }
+
     .sell-form__selection {
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -121,7 +119,8 @@
       width: 100%;
       margin-top: 16px;
     }
-    .price {
+    .sell-form__box__input__label__number {
+      text-align:right;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
@@ -202,7 +201,6 @@
   }
   .sell-price .form-group .li-right {
     float: right;
-    width: 50%;
   }
   .item-price {
     .form-group__price {
@@ -244,11 +242,14 @@
     
     .btn-red {
       align-items: center;
-      background-color: #ea352d;
-      border: 1px solid #ea352d;
-      width: 60%;
+      width: 100%;
       margin: 0 auto 20px;
-      a {
+      font-size: 17px;
+      .red-btn {
+        background-color: #ea352d;
+        border: 1px solid #ea352d;
+        line-height: 48px;
+        width: 60%;
         font-size: 17px;
         color: #fff;
         text-decoration: none;
@@ -257,7 +258,6 @@
     .btn-gray {
       background-color: #ccc;
       border: 1px solid #ccc;
-      color: #fff;
       width: 60%;
       margin: 0 auto;
       a {
@@ -293,6 +293,9 @@
     position: relative;
     background: #fff;
   }
+  .price::placeholder {
+    text-align: right;
+  }
 }
 
 .product-footer {
@@ -300,11 +303,11 @@
   height: 180px;
   text-align: center;
   padding: 20px 0;
-  .footer-produt__contract li {
+  .footer-product__contract li {
     display: inline-block;
     margin: 0 10px 20px 0;
   }
-  .footer-produt__logo {
+  .footer-product__logo {
     width: 185px;
     height: 49px;
     line-height: 49px;
