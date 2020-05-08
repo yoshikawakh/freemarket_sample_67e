@@ -1,4 +1,4 @@
-.main_header
+= render "products/header"
 .signup_page
   .new_title 送付先住所情報登録
   = form_for @address do |f|
@@ -35,4 +35,4 @@
       = f.text_field :phone_number, :placeholder=>"000-0000-0000など", class: "input_box"
     .actions
       = f.submit "完了", class: "red_btn"
-.main_footer
+= render "products/footer"

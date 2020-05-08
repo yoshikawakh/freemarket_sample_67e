@@ -100,7 +100,7 @@
 |column|type|options|
 |------|----|-------|
 |image|string|null: false|
-|product_id|string|null:, foreign_key:true|
+|product_id|string|null: false, foreign_key:true|
 
 ### Association
 belongs_to: product
