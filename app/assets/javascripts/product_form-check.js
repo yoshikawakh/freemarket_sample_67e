@@ -1,3 +1,4 @@
+"use strict";
 $(function(){
   // 各フォームの入力チェック
   $(function(){

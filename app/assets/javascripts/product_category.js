@@ -1,3 +1,4 @@
+"use strict";
 $(function(){
   // カテゴリーセレクトボックスのオプションを作成
   function categoryOption(category){

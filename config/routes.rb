@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     end
   end
   resources :creditcards, only: [:new]
-  resources :products, only: [:index, :new, :create]
+  resources :products, only: [:new, :create]
 end

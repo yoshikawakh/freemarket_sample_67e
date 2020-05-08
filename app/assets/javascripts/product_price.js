@@ -1,3 +1,4 @@
+"use strict";
 $(function(){
   $('#product_price').keyup(function(){
     let price= $(this).val();
