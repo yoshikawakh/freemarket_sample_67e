@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   end
   resources :creditcards, only: [:new]
   resources :products, only: [:new]
+
+  get 'show/index', to: 'show#index'
 end
