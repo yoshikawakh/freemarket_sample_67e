@@ -83,3 +83,5 @@ gem 'devise-i18n-views'
 gem 'pry-rails'
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'dotenv-rails'
+gem "jquery-rails"
