@@ -88,7 +88,7 @@
     .item-button
       .item-button__left
         %p ✴︎お気に入り
-        
+    
       
       .item-button__right
         = link_to "不適切な商品の通報", "#", class: "item-button__right__nogood"
@@ -102,6 +102,11 @@
 
                 
    
+    .item-comment
+      = link_to check_products_path do
+        .itm-comment_center
+        購入画面に進む
+        
     .item-comment
       = link_to "コメントする", "#", class: "item-comment__center"
               
