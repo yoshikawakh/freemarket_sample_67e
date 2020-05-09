@@ -29,17 +29,17 @@ $(function(){
         category_children.forEach(function(child){
           optionHtml += categoryOption(child);
           //option要素を作成する
-        });
-        $('#error-category').before(`<div class="sell-collection_select " id="select-children-box">
+          $('#error-category').before(`<div class="sell-collection_select " id="select-children-box">
                                         <label class="sell-collection_select__label" for="item_category_id">
                                           <select class="sell-collection_select__input" id="category-select-children" required="required" name="item[category_id]">
                                             <option value="">選択して下さい</option>
-                                            ${optionHtml}
+                                              ${optionHtml}
                                           </select>
                                           <i class="fas fa-chevron-down"></i>
                                         </label>
                                       </div>`
-        );
+          );
+        });
       })
       .fail(function(){
         alert('カテゴリー取得に失敗しました');
@@ -68,8 +68,7 @@ $(function(){
         category_grandchildren.forEach(function(grandchildren){
           optionHtml += categoryOption(grandchildren);
           //option要素を作成する
-        });
-        $('#error-category').before(`<div class="sell-collection_select " id="select-grandchildren-box">
+          $('#error-category').before(`<div class="sell-collection_select " id="select-grandchildren-box">
                                         <label class="sell-collection_select__label" for="item_category_id">
                                           <select class="sell-collection_select__input" id="category-select-grandchildren" required="required" name="item[category_id]">
                                             <option value="">選択して下さい</option>
@@ -78,7 +77,8 @@ $(function(){
                                           <i class="fas fa-chevron-down"></i>
                                         </label>
                                       </div>`
-        );
+          );
+        });
       })
       .fail(function(){
         alert('カテゴリー取得に失敗しました');
