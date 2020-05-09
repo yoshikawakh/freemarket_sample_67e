@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     end
   end
   resources :creditcards, only: [:new]
+  resources :products, only: [:new]
+  get 'show/index', to: 'show#index'
   resources :card, only: [:new, :show] do
     collection do
       post 'show', to: 'card#show'
