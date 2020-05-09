@@ -1,0 +1,31 @@
+.product-header
+  = render 'header'
+
+.wrapper
+  %ul.main__content
+    %li.product__check__container 
+      .product__check__title 購入内容の確認
+    %li.product__check__container__01
+      .left__container
+        = image_tag 'pict/flower_hyacinth.png', height: '90px', width: '90px'
+      .right__container
+        .product__title ヒヤシンス
+        .product__price__mini ￥10,000 (税込) 送料込み
+    %li.product__check__container__01
+      .product__price__normal 支払い金額
+      .product__price__normal ￥10,000
+    %li.product__check__container__02
+      .product__check__content 支払い方法
+      = link_to "+登録してください" ,"#", class: 'product__register__content '
+    %li.product__check__container__02
+      .product__check__content 配送先
+      = link_to "+登録してください" ,"#", class: 'product__register__content '
+    .to_buy_btn
+      = link_to "購入する", "#", class: 'to_buy_btn'
+
+.product-footer
+  = render 'footer'
+
+
+
+

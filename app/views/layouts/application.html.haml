@@ -2,6 +2,7 @@
 %html
   %head
     %title FreemarketSample67e
+    %script{src: "https://js.pay.jp/", type: "text/javascript"}
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     = csrf_meta_tags
     = csp_meta_tag
@@ -11,7 +12,5 @@
     %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", :type => "text/javascript"}
     %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"}
     %script{type: "text/javascript", src: "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"}
-    -# %script{type:"text/javascript"},Payjp.setPublicKey('公開鍵');
-
   %body
     = yield
