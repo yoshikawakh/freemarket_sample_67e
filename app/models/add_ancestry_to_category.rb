@@ -1,0 +1,2 @@
+class AddAncestryToCategory < ApplicationRecord
+end

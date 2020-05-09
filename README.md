@@ -84,13 +84,7 @@
 ## categoriesテーブル
 |column|type|options|
 |------|----|-------|
-|ladies|varchar||
-|mens|varchar||
-|baby_kids|varchar||
-|interior|varchar||
-|book|varchar||
-|ticket|varchar||
-|other|varchar||
+|name|string|null: false|
 
 ### Association
 - has_mamy: products
