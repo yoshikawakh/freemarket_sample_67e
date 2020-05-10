@@ -171,20 +171,21 @@
         = link_to root_path do
           %h3 アーカイバ
       .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product3
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  30000
-                  円
-                %li 
-                  %span
-              %p (税込)
+        = link_to show_index_path do
+          .main__box5__box__product-box__product
+            .main__box5__box__product-box__product__image-box
+              = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
+            .main__box5__box__product-box__product__show-box
+              %h3
+                product3
+              .main__box5__box__product-box__product__show-box__date
+                %ul
+                  %li
+                    30000
+                    円
+                  %li 
+                    %span
+                %p (税込)
 
       .main__box5__box__product-box
         .main__box5__box__product-box__product

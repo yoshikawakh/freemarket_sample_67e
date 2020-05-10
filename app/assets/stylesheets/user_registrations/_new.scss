@@ -6,7 +6,7 @@ body{
 
 .signup_page{
   background-color: #FFFFFF;
-  height:1000px;
+  height:100%;
   width: 700px;
   margin: auto;
   font-weight: 300;
@@ -25,15 +25,15 @@ body{
     padding: 24px 16px 40px;
     width: 350px;
     margin: auto;
-
+    
     .confirmation{
       width: 80%;
     }
     
     .field{
       margin-top: 32px;
-      }
-      
+    }
+    
     .form_require{
       background: #ea352d;
       color: #ffffff;
@@ -52,21 +52,21 @@ body{
     .form_control{
       height: 30px;
       width: 26%;
-
+      
     }
-
+    
     .input_box{
       height: 30px;
       width: 80%;
       border-radius: 5px;
       margin-top: 5px;
-
+      
       &__half{
         height: 30px;
         width: 40%;
         border-radius: 5px;
         margin-top: 5px;
-
+        
       }
     }
     
@@ -75,7 +75,7 @@ body{
       width: 26%;
       
     }
-
+    
     .actions{
       margin-top: 32px;
       
@@ -84,8 +84,14 @@ body{
         background-color: #ea352d;
         color: #FFFFFF;
         width: 80%;
-
+        
       }
+    }
+    #error_explanation{
+      background-color: #ccffff;
+      color: red;
+      margin: 10px 0;
+
     }
   }
 }

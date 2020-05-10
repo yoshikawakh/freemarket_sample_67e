@@ -12,9 +12,17 @@ Rails.application.routes.draw do
       get 'logout'
     end
   end
+
   resources :creditcards, only: [:new]
   resources :products, only: [:new, :create]
+  resources :products, only: [:new] do
+    collection do
+      get 'check'
+    end
+  end
+
   get 'show/index', to: 'show#index'
+
   resources :card, only: [:new, :show] do
     collection do
       post 'show', to: 'card#show'
@@ -22,9 +30,11 @@ Rails.application.routes.draw do
       post 'delete', to: 'card#delete'
     end
   end
-  resources :products, only: [:new] do
+
+  resources :purchase, only: [:index] do
     collection do
-      get 'buy'
+      post 'pay', to: 'purchase#pay'
+      get 'done', to: 'purchase#done'
     end
   end
 end
