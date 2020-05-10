@@ -407,8 +407,8 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.3)
   rails-controller-testing
-  rspec-rails
   rails-i18n
+  rspec-rails
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
