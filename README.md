@@ -71,8 +71,10 @@
 |explanation|text||
 |delivery_method|text||
 |delivery_origin|string|null: false|
-|arrival_date|int|null: false|
+|arrival_date|string|null: false|
 |brand|string||
+|user_id|integer|null :false, foreign_key: true|
+|category_id|integer|null :false, foreign_key: true|
 
 ### Association
 - belongs_to :user
