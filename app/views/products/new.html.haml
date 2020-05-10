@@ -24,7 +24,7 @@
                     %br
                     またはクリックしてファイルをアップロード
         .error-messages#error-image
-        
+
       .sell-form__content
         .form-group
           %label
@@ -52,7 +52,7 @@
               %span.form-require
                 必須
             .icon-wrap
-              = f.text_field :product_name, class: 'sell-form__sample', placeholder: '選択してください',id: 'category-select'
+              = f.text_field :category_id, class: 'sell-form__sample', placeholder: '選択してください',id: 'category-select'
               = icon('fas', 'angle-down')
                 
           .error-messages#error-category
