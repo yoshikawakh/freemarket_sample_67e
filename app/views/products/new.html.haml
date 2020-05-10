@@ -24,7 +24,7 @@
                     %br
                     またはクリックしてファイルをアップロード
         .error-messages#error-image
-
+        
       .sell-form__content
         .form-group
           %label
@@ -128,8 +128,8 @@
                     = f.label :price, class: 'sell-form__box__input__label' do
                       ¥
                       = f.number_field :price, {placeholder: '0', value: '', autocomplete:"off", class: 'sell-form__box__input__label__number', required: "required"}
-                      
-            .error-messages#error-price
+            .error-messages
+              .error-messages__price#error-price
 
             .sell-price__commission
               .sell-price__commission__ratio
