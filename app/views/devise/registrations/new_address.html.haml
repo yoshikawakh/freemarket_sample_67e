@@ -12,7 +12,7 @@
       = f.label :都道府県
       %span.form_require 必須
       %br/
-      = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+      = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt:"--"
       %br/
     .field
       = f.label :市区町村

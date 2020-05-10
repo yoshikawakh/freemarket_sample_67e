@@ -7,9 +7,16 @@ ja:
             blank: "が入力されていません。"
           password:
             blank: "が入力されていません。"
+          
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"
+        nickname: "ニックネーム"
+        first_name: "お名前(名字)"
+        last_name: "お名前(名前)"
+        first_name_kana: "お名前(カナ)"
+        last_name_kana: "お名前(カナ)"
+        birth_date: "生年月日"
         password_confirmation: "確認用パスワード"
         remember_me: "ログインを記憶"
     models:
