@@ -3,7 +3,7 @@
 
 .wrapper
   .sell-form
-    = form_with model:@product do |f|
+    = form_with model: @product, local: true do |f|
       .sell-form__image
         %h3.sell-form__image--head
           出品画像
