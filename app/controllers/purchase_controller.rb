@@ -5,7 +5,7 @@ class PurchaseController < ApplicationController
     if card.blank?
       redirect_to new_card_path
     else
-      Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
+      Payjp.api_key = "sk_test_96379ca7e5e06277458aa64b"
       customer = Payjp::Customer.retrieve(card.customer_id)
       @default_card_information = customer.cards.retrieve(card.card_id)
     end
@@ -13,7 +13,7 @@ class PurchaseController < ApplicationController
 
   def pay
     card = Card.find_by(user_id: current_user.id)
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp.api_key = "sk_test_96379ca7e5e06277458aa64b"
     Payjp::Charge.create(
       :amount => 30000,
       :customer => card.customer_id,
