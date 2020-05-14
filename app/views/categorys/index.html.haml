@@ -1,55 +1,28 @@
-= link_to root_path, class: "fixed_btn" do
-  %h1 出品する
-  = image_tag "icon/icon_camera.png", height: '62%', width: '62%'
-.header
-  .header__box
-    .header__box__1
-      .header__box__1__title-box
-        .header__box__1__title-box__title
-          = link_to root_path do
-            = image_tag 'logo/logo.png', height: '40px', width: '140px'
-          
-      .header__box__1__search-box
-        = form_with(url: root_path, local: true, method: :get, class: "header__box__1__search-box__box") do |f|
-          = f.text_field :keyword, placeholder: "キーワードから探す", class: "header__box__1__search-box__box__text"
-          = image_submit_tag 'icon/icon-search 1.png', height: '19px', width: '19px', class: 'header__box__1__search-box__box__submit'
-    .header__box__2
-      .header__box__2__content
-        %ul
-          %li
-            = link_to "/categorys" do
-              カテゴリー
-            
-          %li
-            = link_to root_path do
-              ブランド
-      .header__box__2__login
-        %ul
-          %li
-            = link_to root_path do
-              マイページ
+= render "header"
 
 
-.category-index
-  .category
-    .category__title
-      %h2 カテゴリー一覧
-    .category__list--nav
+
+.category
+  .category__main
+    .category__main__img
+    .category__main__index
+      .category__main__index__title
+      .category__main__index__list--nav
+        - @parents.each do |parent|
+          = link_to categorys_path(parent), class: "category__main__index__list--nav__root" do
+            %p 
+              = parent.name
+
       - @parents.each do |parent|
-        = link_to categorys_path(parent), class: "category__list--nav__root" do
-          %p 
-            =parent.name
-
-    - @parents.each do |parent|
-      .category__list--box
         .invisual
           .invisual__title
+            -# %a{ :href => 'http://google.co.jp', :id => 'anchor1' }
             = link_to categorys_path(parent) do
               %h3
                 = parent.name
           .invisual__list
-            = link_to categorys_path(parent), class: "all" do
-              %p すべて
+            = link_to categorys_path(), class: "all" do
+              -# %p すべ
 
             - parent.children.each do |children|
               .invisual__list__sub-category-name
@@ -59,11 +32,14 @@
 
                     .child_box
                       .child_box__list
-                        = link_to "すべて", categorys_path(children), class: "child_box__list__all"
+                        -# = link_to categorys_path(children), class: "child_box__list__all"
           
                       - children.children.each do |grandchild|
                         = link_to categorys_path(grandchild), class: "child_box__list" do
                           = grandchild.name
+
+            %i.fa.fa-arrow-up
+              ページトップへ
 
 .footer-sub
   .footer-sub__box

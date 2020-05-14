@@ -1,5 +1,5 @@
 class CategorysController < ApplicationController
   def index
-    @parents = Category.all.limit(13)
+    @parents = Category.all.order("id ASC").limit(13)
   end
 end
