@@ -19,7 +19,7 @@ gem 'mini_racer', platforms: :ruby
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -44,6 +44,10 @@ group :development, :test do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -54,6 +58,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'brakeman', require: false
 end
 
 group :test do
@@ -72,4 +77,18 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'ancestry'
-gem "jquery-rails"
+gem 'erb2haml'
+gem 'payjp'
+gem 'font-awesome-sass'
+gem 'devise'
+gem 'active_hash'
+gem 'rails-i18n'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'pry-rails'
+gem 'carrierwave'
+gem 'fog-aws'
+gem 'mini_magick'
+gem 'jquery-rails'
+gem 'dotenv-rails'
+gem "font-awesome-rails"

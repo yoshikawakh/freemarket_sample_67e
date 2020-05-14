@@ -1,4 +1,4 @@
-= link_to root_path, class: "fixed_btn" do
+= link_to new_product_path, class: "fixed_btn" do
   %h1 出品する
   = image_tag "icon/icon_camera.png", height: '62%', width: '62%'
 .header
@@ -38,8 +38,13 @@
       .header__box__2__login
         %ul
           %li
-            = link_to root_path do
-              マイページ
+            -if user_signed_in? 
+              = link_to users_path do
+                マイページ
+              = link_to "ログアウト", destroy_user_session_path, method: :delete
+            -else
+              = link_to "新規登録", new_user_registration_path
+              = link_to "ログイン", new_user_session_path
 
 .main
   .main__box1
@@ -178,20 +183,21 @@
         = link_to root_path do
           %h3 アーカイバ
       .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product3
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  30000
-                  円
-                %li 
-                  %span
-              %p (税込)
+        = link_to show_index_path do
+          .main__box5__box__product-box__product
+            .main__box5__box__product-box__product__image-box
+              = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
+            .main__box5__box__product-box__product__show-box
+              %h3
+                product3
+              .main__box5__box__product-box__product__show-box__date
+                %ul
+                  %li
+                    30000
+                    円
+                  %li 
+                    %span
+                %p (税込)
 
       .main__box5__box__product-box
         .main__box5__box__product-box__product
