@@ -101,7 +101,11 @@
         
 
                 
-   
+    /１ログインしていて出品している ２sold out ３12以外＝購入することができる。
+    /-if user_signed_in? && current_user.id == @products.user_id
+    / = 
+    /-elsif @products.xxxxx_id.present?
+    /else
     .item-comment
       = link_to check_products_path do
         .itm-comment_center
