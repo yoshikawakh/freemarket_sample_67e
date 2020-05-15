@@ -14,10 +14,10 @@ Rails.application.routes.draw do
   end
 
   resources :creditcards, only: [:new]
-  resources :products, only: [:new, :create]
-  resources :products, only: [:new] do
+  resources :products do
     collection do
       get 'check'
+      get "set_images"
     end
   end
 

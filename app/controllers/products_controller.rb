@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :set_product, only: [:show, :edit, :update]
+
   def new
     @product = Product.new
     @product.images.build 
@@ -28,5 +30,13 @@ class ProductsController < ApplicationController
   private
   def product_params
     params.require(:product).permit(:product_name, :price, :category_id, :size, :status, :postage, :explanation, :transaction_status, :delivery_method, :delivery_origin, :arrival_date, :brand, images_attributes: [:image]).merge(user_id: current_user.id)
+  end
+
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
+  def set_images
+    @images = Image.where(product_id: params[:id])
   end
 end
