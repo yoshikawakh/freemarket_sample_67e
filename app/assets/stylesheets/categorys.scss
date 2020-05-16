@@ -18,7 +18,6 @@
       &__list--nav{
         &__root {
           background-color: #fff;
-          // float: left;
           border-radius: 4px;
           min-width: 80px;
           line-height: 40px;
@@ -66,7 +65,6 @@
       text-align: left;
       font-weight: bold;
       font-size: 22px;
-  
     }
   }
 }
@@ -88,4 +86,23 @@
   display: inline-block;
   width: calc(100% / 2);
   padding-left: 20px;
+}
+
+.invisual__list{
+  background-color:white;
+  margin-bottom: 10px;
+}
+
+.breadCrumbs {
+  width: 100%;
+  border-top: 1px solid #eee;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  position: relative;
+  padding: 0 60px;
+  display: block;
+  height: 50px;
+}
+
+.fa.fa-arrow-up{
+  font-size: 20px;
 }

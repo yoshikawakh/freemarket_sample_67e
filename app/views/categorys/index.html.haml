@@ -1,6 +1,9 @@
 = render "header"
 
-
+%nav.breadCrumbs
+  %ul.breadCrumbs__a
+    %li
+      #{@parents.name}
 
 .category
   .category__main
@@ -37,7 +40,7 @@
                       - children.children.each do |grandchild|
                         = link_to categorys_path(grandchild), class: "child_box__list" do
                           = grandchild.name
-
+          = link_to root_path do
             %i.fa.fa-arrow-up
               ページトップへ
 
