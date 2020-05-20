@@ -4,6 +4,10 @@ class ProductsController < ApplicationController
     @product.images.build 
   end
 
+  def index
+    @product = Product.All
+  end
+
   # 親カテゴリーが選択された後に動くアクション
   def category_children
     @category_children = Category.find("#{params[:parent_id]}").children
