@@ -24,7 +24,6 @@
   }
 }
 .wrapper {
-  overflow: scroll;
   background-color: #f8f8f8;
   .sell-form {
     margin: 0 auto;
@@ -322,4 +321,27 @@
   p {
     font-size: 14px;
   }
+}
+
+.listing-select-wrapper__box--select{
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  height: 48px;
+  margin: 0;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.form-box{
+}
+
+.listining-product-datail__category{
+  margin-bottom: 30px;
+
 }

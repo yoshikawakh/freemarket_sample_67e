@@ -40,17 +40,6 @@ $(function(){
     }
   });
 
-  // $('form').on('submit',function(){
-  //   let value = $('#name-select').val();
-  //   if(value == ""){
-  //     $('#error-name').text('入力してください');
-  //     $('#name-select').css('border-color','red');
-  //   }else{
-  //     $('#error-name').text('');
-  //     $('#name-select').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
-
   //商品説明
   $('.sell-form__description').on('blur',function(){
     let value = $(this).val();
@@ -62,17 +51,6 @@ $(function(){
       $(this).css('border-color','rgb(204, 204, 204)');
     }
   });
-
-  // $('form').on('submit',function(){
-  //   let value = $(this).val();
-  //   if(value == ""){
-  //     $('#error-text').text('入力してください');
-  //     $('.sell-form__description').css('border-color','red');
-  //   }else{
-  //     $('#error-text').text('');
-  //     $('.sell-form__description').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
 
   //状態
   $('#condition-select').on('blur',function(){
@@ -86,17 +64,6 @@ $(function(){
     }
   });
 
-  // $('form').on('submit',function(){
-  //   let value = $(this).val();
-  //   if(value == ""){
-  //     $('#error-condition').text('選択して下さい');
-  //     $('#condition-select').css('border-color','red');
-  //   }else{
-  //     $('#error-condition').text('');
-  //     $('#condition-select').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
-
   //配送料の負担
   $('#postage-select').on('blur',function(){
     let value = $(this).val();
@@ -109,17 +76,6 @@ $(function(){
     }
   });
 
-  // $('form').on('submit',function(){
-  //   let value = $(this).val();
-  //   if(value == ""){
-  //     $('#error-deliverycost').text('選択して下さい');
-  //     $('#postage-select').css('border-color','red');
-  //   }else{
-  //     $('#error-deliverycost').text('');
-  //     $('#postage-select').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
-
   //配達の方法
   $('#delivery-company').on('blur',function(){
     let value = $(this).val();
@@ -131,17 +87,6 @@ $(function(){
       $(this).css('border-color','rgb(204, 204, 204)');
     }
   });
-
-  // $('form').on('submit',function(){
-  //   let value = $(this).val();
-  //   if(value == ""){
-  //     $('#error-delivery').text('選択して下さい');
-  //     $('#delivery-company').css('border-color','red');
-  //   }else{
-  //     $('#error-delivery').text('');
-  //     $('#delivery-company').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
   
   //発送元の地域
   $('#address-select').on('blur',function(){
@@ -155,17 +100,6 @@ $(function(){
     }
   });
 
-  // $('form').on('submit',function(){
-  //   let value = $(this).val();
-  //   if(value == ""){
-  //     $('#error-address').text('選択して下さい');
-  //     $('#address-select').css('border-color','red');
-  //   }else{
-  //     $('#error-address').text('');
-  //     $('#address-select').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
-
   //発送までの日数
   $('#delivery_days-select').on('blur',function(){
     let value = $(this).val();
@@ -177,17 +111,6 @@ $(function(){
       $(this).css('border-color','rgb(204, 204, 204)');
     }
   });
-
-  // $('form').on('submit',function(){
-  //   let value = $(this).val();
-  //   if(value == ""){
-  //     $('#error-delivery_days').text('選択して下さい');
-  //     $('#delivery_days-select').css('border-color','red');
-  //   }else{
-  //     $('#error-delivery_days').text('');
-  //     $('#delivery_days-select').css('border-color','rgb(204, 204, 204)');
-  //   }
-  // });
 
   //価格
   $('.sell-form__box__input__label__number').on('blur',function(){

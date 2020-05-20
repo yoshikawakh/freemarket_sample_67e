@@ -2,17 +2,31 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
     @product.images.build 
+    @category_parent_array = ["---"]
+    Category.where(ancestry: nil).each do |parent|
+      @category_parent_array << parent.name
+    end
+    respond_to do |format|
+      format.html
+      format.json
+    end
+
+
   end
 
   # 親カテゴリーが選択された後に動くアクション
-  def category_children
-    @category_children = Category.find("#{params[:parent_id]}").children
+  def get_category_children
+    # @category_children = Category.find("#{params[:parent_id]}").children
     #親カテゴリーに紐付く子カテゴリーを取得
+    @category_children = Category.find_by(name: "#{params[:parent_name]}", ancestry: nil).children
+
   end
 
   # 子カテゴリーが選択された後に動くアクション
-  def category_grandchildren
+  def get_category_grandchildren
+    # @category_grandchildren = Category.find("#{params[:child_id]}").children
     @category_grandchildren = Category.find("#{params[:child_id]}").children
+
     #子カテゴリーに紐付く孫カテゴリーの配列を取得
   end
 
@@ -21,7 +35,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to root_path
     else
-      render :new
+      render :new, images: @product.images.build
     end
   end
 
