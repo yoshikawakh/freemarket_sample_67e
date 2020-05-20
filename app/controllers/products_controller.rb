@@ -11,7 +11,6 @@ class ProductsController < ApplicationController
       format.json
     end
 
-
   end
 
   # 親カテゴリーが選択された後に動くアクション

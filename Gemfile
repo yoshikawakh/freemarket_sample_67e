@@ -91,4 +91,4 @@ gem 'fog-aws'
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'dotenv-rails'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
