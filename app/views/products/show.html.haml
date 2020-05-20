@@ -30,7 +30,8 @@
 
 .show-items-containers
   %section.item-box-container
-    %h1.item-name product
+    %h1.item-name 
+      = @product.product_name
     
     .item-main-content
       .item-photo
@@ -60,7 +61,8 @@
       %tbody
         %tr
           %th 出品者
-          %td hoge
+          %td 
+            = @product.user_id
         %tr    
           %th カテゴリー
           %td ベビーキッズ
@@ -73,11 +75,13 @@
               
         %tr
           %th 商品の状態
-          %td 未使用に近い
+          %td 
+          
             
         %tr
           %th 配送料の負担
-          %td 送料込み（出品者負担）
+          %td 
+          /= @products.postage 
         %tr
           %th 配送元の地域
           %td 岩手県
@@ -103,9 +107,14 @@
                 
    
     .item-comment
-      = link_to check_products_path do
-        .itm-comment_center
-        購入画面に進む
+      -if current_user.nil?
+        = link_to "ログイン", new_user_session_path
+
+      -else
+        = link_to check_products_path do
+          .itm-comment_center
+          購入画面に進む
+
         
     .item-comment
       = link_to "コメントする", "#", class: "item-comment__center"

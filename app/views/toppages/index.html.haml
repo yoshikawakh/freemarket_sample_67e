@@ -117,20 +117,38 @@
         = link_to root_path do
           %h3 新規投稿商品
       .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product3
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  30000
-                  円
-                %li
+        - @products.first(3).each do |product|
+          .main__box5__box__product-box__product
+            = link_to "/products/#{product.id}", method: :get do
+              -if product.buyer_id.present?
+                .main__box5__box__product-box__product__image-box
                   %span
-              %p (税込)
+                  %h4 SOLD
+                  = image_tag product.images[0].images.url, height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
+                .main__box5__box__product-box__product__show-box
+                %h3
+                  = product.product_name
+                .main__box5__box__product-box__product__show-box__date
+                  %ul
+                    %li
+                      = product.price
+                      円
+                  %p (税込)
+              -else 
+                .main__box5__box__product-box__product__image-box
+                  = image_tag product.images[0].image.url, height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'              
+                  
+                .main__box5__box__product-box__product__show-box
+                  %h3
+                    = product.product_name
+                  .main__box5__box__product-box__product__show-box__date
+
+                    %ul
+                      %li
+                        = product.price
+                        円
+                      %li 
+                    %p (税込)
 
       .main__box5__box__product-box
         .main__box5__box__product-box__product
