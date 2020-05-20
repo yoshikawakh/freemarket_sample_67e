@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @product = Product.All
+    @product = Products.All
   end
 
   # 親カテゴリーが選択された後に動くアクション
