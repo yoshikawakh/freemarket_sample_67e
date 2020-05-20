@@ -62,7 +62,7 @@
         %tr
           %th 出品者
           %td 
-            = @product.user_id
+            = @user.nickname
         %tr    
           %th カテゴリー
           %td 
@@ -88,7 +88,7 @@
         %tr
           %th 配送元の地域
           %td 
-            = @product.delivery_origin
+            = @addresses.city
         %tr
           %th 発送日の目安
           %td 
