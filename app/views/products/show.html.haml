@@ -48,7 +48,7 @@
       
     .item-price
       %span.item-price__bold
-        ¥30000
+        = @product.price
       %span.item-price__tax 
         (税込)
       %span.item-price__shipping-fee 
@@ -65,29 +65,34 @@
             = @product.user_id
         %tr    
           %th カテゴリー
-          %td ベビーキッズ
+          %td 
+            = @product.category_id
         %tr    
           %th ブランド
           %td 
         %tr    
           %th 商品のサイズ
           %td 
+            
               
         %tr
           %th 商品の状態
           %td 
+            = @product.status
           
             
         %tr
           %th 配送料の負担
           %td 
-          /= @products.postage 
+            = @product.postage 
         %tr
           %th 配送元の地域
-          %td 岩手県
+          %td 
+            = @product.delivery_origin
         %tr
           %th 発送日の目安
-          %td ４−7日で発送
+          %td 
+            = @product.arrival_date
 
     .item-button
       .item-button__left
