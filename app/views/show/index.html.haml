@@ -47,7 +47,8 @@
       
     .item-price
       %span.item-price__bold
-        ¥30000
+        = @price = Product.all.last[:price]
+        円
       %span.item-price__tax 
         (税込)
       %span.item-price__shipping-fee 
