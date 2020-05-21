@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'logout'
     end
   end
+  resources 'categorys', only: [:index]
 
   resources :creditcards, only: [:new]
   resources :products, only: [:index, :new, :create]
@@ -20,6 +21,15 @@ Rails.application.routes.draw do
       get 'check'
     end
   end
+  
+  resources :products do
+    collection do
+      get 'get_category_children', defaults: { format: 'json' }
+      get 'get_category_grandchildren', defaults: { format: 'json' }
+      get 'delete', to: 'products#delete'
+    end
+  end
+
 
   get 'show/index', to: 'show#index'
 
