@@ -29,7 +29,12 @@ class ProductsController < ApplicationController
     @product= Product.find(params[:id])
     @user= User.find(params[:id])
     @addresses= Address.find(params[:id])
+    @images = Image.find(params[:id])
 
+  end
+
+  def index
+    @products = Product.includes(:images).all.order(updated_at: :desc)
   end
 
   private
