@@ -3,14 +3,11 @@ class ProductsController < ApplicationController
     @product = Product.new
     @product.images.build 
     @category_parent_array = ["---"]
-    Category.where(ancestry: nil).each do |parent|
-      @category_parent_array << parent.name
-    end
+    @category_parent_array = Category.limit(13).pluck(:name)
     respond_to do |format|
       format.html
       format.json
     end
-
   end
 
   # 親カテゴリーが選択された後に動くアクション

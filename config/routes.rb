@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get 'logout'
     end
   end
-  resources "categorys", only: [:index]
+  resources 'categorys', only: [:index]
 
   resources :creditcards, only: [:new]
   resources :products, only: [:new, :create]
