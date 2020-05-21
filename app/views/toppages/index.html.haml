@@ -110,6 +110,7 @@
           = image_tag 'icon/icon-04.png', height: 'auto', width: '100%', class: 'main__box4__box__box1__image-box__image'
         %h3 様々な支払いに対応
         %p お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+
   .main__box5
     %h2 ピックアップカテゴリー
     .main__box5__box
@@ -117,109 +118,82 @@
         = link_to root_path do
           %h3 新規投稿商品
       .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product3
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  30000
-                  円
-                %li
+        - @product.first(3).each do |product|
+          .main__box5__box__product-box__product
+            = link_to "/products/#{product.id}", method: :get do
+              -if product.buyer_id.present?
+                .main__box5__box__product-box__product__image-box
                   %span
-              %p (税込)
+                    %h4 SOLD
+                  = image_tag product.images[0].image.url, height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
+                .main__box5__box__product-box__product__show-box
+                  %h3
+                    = product.product_name
+                  .main__box5__box__product-box__product__show-box__date
+                    %ul
+                      %li
+                        = product.price
+                        円
+                    %p (税込)
 
-      .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product2
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  20000
-                  円
-                %li
-                  %span
-              %p (税込)
-
-      .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product1
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  10000
-                  円
-                %li
-                  %span
-              %p (税込)
+              - else 
+                .main__box5__box__product-box__product__image-box
+                  = image_tag product.images[0].image.url, height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'              
+                
+                .main__box5__box__product-box__product__show-box
+                  %h3
+                    = product.product_name
+                  .main__box5__box__product-box__product__show-box__date
+  
+                    %ul
+                      %li
+                        = product.price
+                        円
+                      %li 
+                    %p (税込)
 
   .main__box5
-    %h2 ピックアップブランド
+    %h2 ピックアップカテゴリー
     .main__box5__box
       .main__box5__box__title
         = link_to root_path do
           %h3 アーカイバ
       .main__box5__box__product-box
-        = link_to show_index_path do
+        - @product.last(3).each do |product|
           .main__box5__box__product-box__product
-            .main__box5__box__product-box__product__image-box
-              = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-            .main__box5__box__product-box__product__show-box
-              %h3
-                product3
-              .main__box5__box__product-box__product__show-box__date
-                %ul
-                  %li
-                    30000
-                    円
-                  %li 
-                    %span
-                %p (税込)
-
-      .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product2
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  20000
-                  円
-                %li 
+            = link_to "/products/#{product.id}", method: :get do
+              -if product.buyer_id.present?
+                .main__box5__box__product-box__product__image-box
                   %span
-              %p (税込)
+                    %h4 SOLD
+                  = image_tag product.images[0].image.url, height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
+                .main__box5__box__product-box__product__show-box
+                  %h3
+                    = product.product_name
+                  .main__box5__box__product-box__product__show-box__date
+                    %ul
+                      %li
+                        = product.price
+                        円
+                    %p (税込)
 
-      .main__box5__box__product-box
-        .main__box5__box__product-box__product
-          .main__box5__box__product-box__product__image-box
-            = image_tag 'pict/flower_hyacinth.png', height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'
-          .main__box5__box__product-box__product__show-box
-            %h3
-              product1
-            .main__box5__box__product-box__product__show-box__date
-              %ul
-                %li
-                  10000
-                  円
-                %li 
-                  %span
-              %p (税込)
+              - else 
+                .main__box5__box__product-box__product__image-box
+                  = image_tag product.images[0].image.url, height: '150px', width: '220px', class: 'main__box5__box__product-box__product__image-box__image'              
+                
+                .main__box5__box__product-box__product__show-box
+                  %h3
+                    = product.product_name
+                  .main__box5__box__product-box__product__show-box__date
+  
+                    %ul
+                      %li
+                        = product.price
+                        円
+                      %li 
+                    %p (税込)
 
-               
+
     
 
 

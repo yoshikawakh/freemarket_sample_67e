@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   resources 'categorys', only: [:index]
 
   resources :creditcards, only: [:new]
-  resources :products, only: [:new, :create]
+  resources :products, only: [:index, :new, :create]
   resources :products, only: [:new] do
     collection do
       get 'check'

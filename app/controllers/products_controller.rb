@@ -10,6 +10,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def index
+    @product = Products.All
+  end
+
   # 親カテゴリーが選択された後に動くアクション
   def get_category_children
     #親カテゴリーに紐付く子カテゴリーを取得

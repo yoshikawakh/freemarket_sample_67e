@@ -4,6 +4,7 @@
 !/tmp/.keep
 config/secrets.yml
 .DS_Store
+public/uploads
 # Ignore uploaded files in development
 *.env
 /storage/*
