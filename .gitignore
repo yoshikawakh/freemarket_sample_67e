@@ -15,5 +15,5 @@ public/uploads
 .byebug_history
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-# Ignore master key for decrypting credentials and more.
-/config/master.key
+/public/image
+/public/uploads
