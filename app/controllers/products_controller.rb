@@ -30,7 +30,6 @@ class ProductsController < ApplicationController
     @user= User.find(params[:id])
     @addresses= Address.find(params[:id])
     @images = Image.find(params[:id])
-
   end
 
   def index

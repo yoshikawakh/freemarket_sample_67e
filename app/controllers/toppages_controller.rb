@@ -1,5 +1,5 @@
 class ToppagesController < ApplicationController
-    # def index_product_data
+  # def index_product_data
   #   @product_name = Product.all{:id[:product_name]}
   #   @price = Product.all{:id[:price]}
   #   @image = Image.all{:id[:product_id]}
