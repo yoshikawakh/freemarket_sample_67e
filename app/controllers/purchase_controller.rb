@@ -24,7 +24,7 @@ class PurchaseController < ApplicationController
   redirect_to done_purchase_index_path
   end
 
-def  set_product
+  def  set_product
   @product = Product.all.last(params[:id])
   @product.update(buyer_id: current_user.id)
   end
