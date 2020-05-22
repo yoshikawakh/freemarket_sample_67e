@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   resources :products do
     collection do
       get 'check'
-      get "set_images"
     end
   end
 
