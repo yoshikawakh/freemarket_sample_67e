@@ -86,6 +86,7 @@
 ## categoriesテーブル
 |column|type|options|
 |------|----|-------|
+|name|string|null: false|
 |ladies|string||
 |mens|string||
 |baby_kids|string||
@@ -103,6 +104,7 @@
 |------|----|-------|
 |image|string|null: false|
 |product_id|string|null: false, foreign_key:true|
+
 
 ### Association
 belongs_to: product

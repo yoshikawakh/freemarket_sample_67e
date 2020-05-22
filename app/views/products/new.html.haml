@@ -45,17 +45,17 @@
       .sell-form__content
         %h3.sell-form__summary
           商品の詳細
-        .sell-form__status
-          .sell-form__item
-            %label
-              カテゴリー
-              %span.form-require
-                必須
-            .icon-wrap
-              = f.text_field :category_id, class: 'sell-form__sample', placeholder: '選択してください',id: 'category-select'
-              = icon('fas', 'angle-down')
+        .form-box
+          .listing-product-detail__category
+
+            = f.label :category_id, 'カテゴリー', class: 'listing-default__label'
+            %span.form-require 必須
+            .listing-select-wrapper
+              .listing-select-wrapper__box
+                = select_tag(:category_id, options_for_select(@category_parent_array),class: 'listing-select-wrapper__box--select', id: 'parent_category')
                 
           .error-messages#error-category
+
 
           .sell-form__item
             %label

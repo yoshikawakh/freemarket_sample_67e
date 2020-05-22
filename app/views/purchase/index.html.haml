@@ -8,8 +8,11 @@
       .left__container
         = image_tag 'pict/flower_hyacinth.png', height: '90px', width: '90px'
       .right__container
-        .product__title  ヒヤシンス
-        .product__price__mini ¥30000(送料込み) 
+        .product__title
+          = Product.all.last[:product_name]
+        .product__price__mini
+          = Product.all.last[:price]
+          円
         %br/
     %li.product__check__container__02
       .product__check__content 支払い方法

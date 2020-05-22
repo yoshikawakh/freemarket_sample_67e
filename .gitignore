@@ -4,6 +4,7 @@
 !/tmp/.keep
 config/secrets.yml
 .DS_Store
+public/uploads
 # Ignore uploaded files in development
 *.env
 /storage/*
@@ -14,3 +15,5 @@ config/secrets.yml
 .byebug_history
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/public/image
+/public/uploads
