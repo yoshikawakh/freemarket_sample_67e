@@ -7,6 +7,5 @@ class ToppagesController < ApplicationController
       format.html
       format.json
     end
-
   end
 end
