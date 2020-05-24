@@ -33,8 +33,8 @@ $(function(){
           $("#image-input>label").eq(-1).css('display','none');
           // 入力されたlabelを見えなくする
 
-          if (imageLength < 9) {
-            // 表示されているプレビューが９以下なら、新たにinputを生成する
+          if (imageLength < 4) {
+            // 表示されているプレビューが4以下なら、新たにinputを生成する
             $("#image-input").append(`<label for="item_images${labelLength+1}" class="sell-form__image__dropbox__label" data-label-id="${labelLength+1}">
                                         <input id="item_images${labelLength+1}" style="display: none;" type="file" name="product[images_attributes][${labelLength+1}][image]">
                                         <div class="fas fa-camera fa-lg"></i>
