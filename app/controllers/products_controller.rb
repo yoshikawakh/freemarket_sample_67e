@@ -1,6 +1,5 @@
 class ProductsController < ApplicationController
   before_action :set_product,           only: [:show, :edit, :update]
-  before_action :set_user,              only: [:index,:show]
 
   def new
     @product = Product.new
@@ -31,7 +30,6 @@ class ProductsController < ApplicationController
     else
       # render :new, images: @product.images.build
       redirect_to new_product_path
-
     end
   end
 
@@ -56,7 +54,6 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.includes(:images).all.order(updated_at: :desc)
-
   end
 
   private
@@ -67,5 +64,4 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
-
 end

@@ -8,7 +8,7 @@ class Product < ApplicationRecord
   belongs_to_active_hash :prefecture
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
-  validates :images , length: { minimum: 1, maximum: 10}
+  validates :images , length: { minimum: 1, maximum: 5}
 
   belongs_to :user
 end
