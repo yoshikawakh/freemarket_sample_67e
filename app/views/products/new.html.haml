@@ -55,21 +55,21 @@
                 
           .error-messages#category_error
 
-        .sell-form__item
-          %label
-            ブランド
-            %span.form-arbitrary 任意
-          .select-wrap
-            = f.text_field :brand, class: 'sell-form__sample', placeholder: '例) シャネル'
-            
-        .sell-form__item
-          %label
-            商品の状態
-            %span.form-require 必須
-          .icon-wrap
-            = select_tag 'product[status]', options_for_select(["新品、未使用", "未使用に近い", "目立った傷や汚れなし", "やや傷や汚れあり", "傷や汚れあり", "全体的に状態が悪い"]),{prompt: "選択して下さい",class:'sell-form__selection',id: 'state-select'}
-            = icon('fas', 'angle-down')
-        .error-messages#state_error
+          .sell-form__item
+            %label
+              ブランド
+              %span.form-arbitrary 任意
+            .select-wrap
+              = f.text_field :brand, class: 'sell-form__sample', placeholder: '例) シャネル'
+              
+          .sell-form__item
+            %label
+              商品の状態
+              %span.form-require 必須
+            .icon-wrap
+              = select_tag 'product[status]', options_for_select(["新品、未使用", "未使用に近い", "目立った傷や汚れなし", "やや傷や汚れあり", "傷や汚れあり", "全体的に状態が悪い"]),{prompt: "選択して下さい",class:'sell-form__selection',id: 'state-select'}
+              = icon('fas', 'angle-down')
+          .error-messages#state_error
 
       .sell-form__content
         %span.sell-form__summary 配送について
