@@ -33,7 +33,6 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product= Product.find(params[:id])
     @grandchild = Category.find(@product.category_id)
     @child = @grandchild.parent
     @parent = @grandchild.parent.parent
@@ -78,6 +77,6 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(params[:id]) 
+    @product = Product.find(params[:id])
   end
 end
