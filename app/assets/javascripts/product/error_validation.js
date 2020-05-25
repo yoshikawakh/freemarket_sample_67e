@@ -63,26 +63,46 @@ function products_input_check(){
     $("#product_detail").css('border-color','red');
     result = false;
   }
-  // //カテゴリー
-  // if(parent_category == ""){
-  //   $("#category_error").html("カテゴリーを選択してください。");
-  //   $("#parent_category").css('border-color','red');
-  //   result = false;
-  // }else{  //子カテゴリーのチェック
-  //   var child_category = $("#child_category").val();
-  //   if(child_category == ""){
-  //   $("#category_error").html("二番目のカテゴリーを選択してください。");
-  //   $("#parent_category").css('border-color','red');
-  //   result = false;
-  //   }else{  //孫カテゴリーのチェック
-  //     var grandchild_category = $("#grandchild_category").val()
-  //     if(grandchild_category == "" || grandchild_category == ""){
-  //     $("#category_error").html("三番目のカテゴリーを選択してください。");
-  //     $("#parent_category").css('border-color','red');
-  //     result = false;
-  //     }
-  //   }
-  // }
+  //カテゴリー(出品)
+  if(parent_category == ""){
+    $("#category_error").html("カテゴリーを選択してください。");
+    $("#parent_category").css('border-color','red');
+    result = false;
+  }else{  //子カテゴリーのチェック
+    var child_category = $("#child_category").val();
+    if(child_category == "---"){
+    $("#category_error").html("二番目のカテゴリーを選択してください。");
+    $("#child_category").css('border-color','red');
+    result = false;
+    }else{  //孫カテゴリーのチェック
+      var grandchild_category = $("#grandchild_category").val()
+      if(grandchild_category == "---" || grandchild_category == ""){
+      $("#category_error").html("三番目のカテゴリーを選択してください。");
+      $("#grandchild_category").css('border-color','red');
+      result = false;
+      }
+    }
+  }
+  //カテゴリー(編集)
+  if(parent_category == "---"){
+    $("#category_error").html("カテゴリーを選択してください。");
+    $("#parent_category").css('border-color','red');
+    result = false;
+  }else{  //子カテゴリーのチェック
+    var child_category = $("#child_category").val();
+    if(child_category == "---"){
+    $("#category_error").html("二番目のカテゴリーを選択してください。");
+    $("#child_category").css('border-color','red');
+    result = false;
+    }else{  //孫カテゴリーのチェック
+      var grandchild_category = $("#grandchild_category").val()
+      if(grandchild_category == "---" || grandchild_category == ""){
+      $("#category_error").html("三番目のカテゴリーを選択してください。");
+      $("#grandchild_category").css('border-color','red');
+      result = false;
+      }
+    }
+  }
   //商品の状態
   if(status == ""){
     $("#state_error").html("商品の状態を選択してください。");

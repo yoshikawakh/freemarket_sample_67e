@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :creditcards, only: [:new]
   resources :products, only: [:index, :new, :create]
-  resources :products do
+  resources :products, only: [:new] do
     collection do
       get 'check'
     end

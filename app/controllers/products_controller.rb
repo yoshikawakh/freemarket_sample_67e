@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product,           only: [:show, :edit, :update]
+  before_action :set_product, only: [:edit, :update]
 
   def new
     @product = Product.new
@@ -28,19 +28,35 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to root_path
     else
-      # render :new, images: @product.images.build
-      redirect_to new_product_path
+      render :edit
     end
   end
 
   def edit
+    @product= Product.find(params[:id])
+    @grandchild = Category.find(@product.category_id)
+    @child = @grandchild.parent
+    @parent = @grandchild.parent.parent
+
+    @category_grandchild_array = ["---"]
+    Category.where(ancestry: @grandchild.ancestry).each do |grandchild|
+      @category_grandchild_array << grandchild.name
+    end
+
+    @category_parent_array = ["---"]
+    Category.where(ancestry: nil).each do |parent|
+      @category_parent_array << parent.name
+    end
+    @category = Category.find(@product.category_id)
+    @child_categories = Category.where('ancestry = ?', "#{@category.parent.ancestry}")
+    @grand_child = Category.where('ancestry = ?', "#{@category.ancestry}")
   end
 
   def update
     if @product.update(product_params)
       redirect_to root_path
     else
-      render :edit
+      redirect_to edit_product_path
     end
   end
 
@@ -62,6 +78,6 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.find(params[:id]) 
   end
 end

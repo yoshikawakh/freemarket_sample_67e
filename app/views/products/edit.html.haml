@@ -56,7 +56,21 @@
             %span.form-require 必須
             .listing-select-wrapper
               .listing-select-wrapper__box
-                = select_tag(:category_id, options_for_select(@category_parent_array),class: 'listing-select-wrapper__box--select', id: 'parent_category') 
+                //親カテゴリーのセレクトボックスの生成
+                = select_tag(:category_id, options_for_select(@category_parent_array, selected: @parent.name),class: 'listing-select-wrapper__box--select', id: 'parent_category')
+            .listing-select-wrapper#children_wrapper   
+              .listing-select-wrapper__box
+                //親カテゴリーのセレクトボックスの生成
+                %select{class: 'listing-select-wrapper__box--select', id: 'child_category'}
+                  %option{value: "---","data-category": "---"} ---
+                  %option{value: "#{@child.id}","data-category": "#{@child.id}", selected: true} #{@child.name}
+                  - @child.siblings.each do |child|
+                    %option{value: "#{child.id}","data-category": "#{child.id}"} #{child.name}
+            .listing-select-wrapper#grandchildren_wrapper     
+              .listing-select-wrapper__box
+                #grandchildren_wrapper.listing-select-wrapper__added
+                  .listing-select-wrapper__box
+                    = f.collection_select(:category_id, @grand_child, :id, :name, {prompt: "---"}, {class: 'listing-select-wrapper__box--select', id: "grandchild_category"})
           .error-messages#category_error
 
           .sell-form__item
