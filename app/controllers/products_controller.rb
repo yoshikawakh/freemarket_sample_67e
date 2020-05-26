@@ -71,6 +71,12 @@ class ProductsController < ApplicationController
     @products = Product.includes(:images).all.order(updated_at: :desc)
   end
 
+  def destroy
+    @product= Product.find(params[:id])
+    @product.destroy
+    redirect_to root_path
+  end
+
   private
   def product_params
     params.require(:product).permit(:product_name, :price, :category_id, :size, :status, :postage, :explanation, :transaction_status, :delivery_method, :delivery_origin, :arrival_date, :brand, images_attributes: [:image, :_destroy, :id]).merge(user_id: current_user.id)
