@@ -117,7 +117,7 @@
         = link_to "ログイン", new_user_session_path
       -elsif current_user.id == @product.user_id
         = link_to "編集する", edit_product_path
-        = link_to "削除する"
+        = link_to "削除する", product_path, method: :delete, data: {confirm: "出品情報を削除しますか？"}
 
       -else
         = link_to check_products_path do
