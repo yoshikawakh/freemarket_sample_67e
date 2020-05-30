@@ -89,7 +89,7 @@
         %tr
           %th 配送元の地域
           %td 
-            = @addresses.city
+            = Prefecture.find(@product.delivery_origin).name
         %tr
           %th 発送日の目安
           %td 
