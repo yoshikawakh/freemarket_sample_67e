@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'favorites/create'
-  get 'favorites/destroy'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
   }
@@ -32,6 +30,9 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :products, only: [:create] do
+    resource :favorites, only: [:create, :destroy]
+  end
 
   get 'show/index', to: 'show#index'
 
