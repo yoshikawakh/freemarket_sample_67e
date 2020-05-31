@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2020_05_31_020718) do
 
+
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "zipcode", null: false
     t.integer "prefecture_id", null: false
