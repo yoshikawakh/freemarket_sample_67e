@@ -11,5 +11,8 @@ class User < ApplicationRecord
   has_one :address
   has_many :favorites, dependent: :destroy
   has_many :favorites_users, through: :favorites, source: :user
-
+  # ユーザーが投稿に対して、すでにいいねをしているのかどうかを判定することができるようにalready_favorited?を定義
+  def already_favorited?(product)
+    self.favorites.exists?(product_id: product.id)
+  end
 end
