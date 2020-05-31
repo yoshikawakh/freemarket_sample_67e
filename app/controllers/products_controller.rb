@@ -62,9 +62,6 @@ class ProductsController < ApplicationController
   def show
     @product= Product.find(params[:id])
     @user= User.find_by(id: @product.user_id)
-    #@address= Address.find(@address.city)
-    #@products = Product.includes(:images).order(updated_at: :desc)
-    #@images = Image.find(params[:id])
     @category = Category.find(@product.category_id)
   end
 
