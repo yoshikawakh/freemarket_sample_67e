@@ -12,8 +12,4 @@ class Product < ApplicationRecord
   belongs_to :user
   has_many :favorites, dependent: :destroy
   has_many :favorites_products, through: :likes, source: :product
-  # ユーザーが商品をお気に入りしたかどうかの判定メソッド
-  def favorited_by?(user)
-    favorites.where(user_id: user.id).exists?
-  end
 end

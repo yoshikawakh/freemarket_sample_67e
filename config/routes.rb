@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products, only: [:create] do
+  resources :products, only: [:show] do
     resource :favorites, only: [:create, :destroy]
   end
 

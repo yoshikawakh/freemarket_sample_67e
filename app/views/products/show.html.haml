@@ -96,34 +96,13 @@
             = @product.arrival_date
 
     .item-button
-      .item-button__left
-        %p ✴︎お気に入り
-        - if user_signed_in?
-          - if @product.favorited_by?(current_user)
-            - link_to product_favorites_path(@product.product.id), method: :delete do
-              %span.favorite
-                = image_tag 'heart-before.svg', alt: 'heart-before'
-                = product.favorites.count
-          - else
-            = link_to product_favorites_path(@product.product_name), method: :post do
-              %span.favorite
-                = image_tag 'heart-before.svg', alt: 'heart-before'
-                = @product.favorites.count
-        - else
-          %p
-            %span.favorite
-              = image_tag 'heart-before.svg', alt: 'heart-before'
-              = @product.favorites.count
-    
-      
-      .item-button__right
-        = link_to "不適切な商品の通報", "#", class: "item-button__right__nogood"
-
-    .item-detail-message
-      .message-container
-        %textarea(type="text" cols="71" rows="7")
-        .message-content
-          %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      .favorite
+        - if user_signed_in? && @product.user.id != current_user.id
+          .favorite__button
+            .favorite__button__left
+              .favorite__button__left__iine
+                %div{id: "favorite-#{@product.id}"}
+                  = render 'favorites/favorite', { product: @product}
 
     .product-comment
       -if current_user.nil?
