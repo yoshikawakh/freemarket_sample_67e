@@ -36,14 +36,10 @@
     .item-main-content
       .item-photo
         .item-photo__top
-          = image_tag 'pict/flower_hyacinth.png',height: '250px', width: '500px'
-          .item-photo__bottom__1
-            %li 
-              = image_tag 'pict/flower_hyacinth.png',height: '150px', width: '160px'
-            %li 
-              = image_tag 'pict/flower_hyacinth.png',height: '150px', width: '160px'
-            %li 
-              = image_tag 'pict/flower_hyacinth.png',height: '150px', width: '160px'
+          = image_tag @product.images[0].image.url, height: '250px', width: '500px'
+        .item-photo__bottom__1
+          - @product.images.each_with_index do |image, i|
+            = image_tag image.image.url, data: { index: i }, class: 'item-photo__bottom'
 
       
     .item-price
