@@ -98,6 +98,22 @@
     .item-button
       .item-button__left
         %p ✴︎お気に入り
+        - if user_signed_in?
+          - if @product.favorited_by?(current_user)
+            - link_to product_favorites_path(@product.product.id), method: :delete do
+              %span.favorite
+                = image_tag 'heart-before.svg', alt: 'heart-before'
+                = product.favorites.count
+          - else
+            = link_to product_favorites_path(@product.product_name), method: :post do
+              %span.favorite
+                = image_tag 'heart-before.svg', alt: 'heart-before'
+                = @product.favorites.count
+        - else
+          %p
+            %span.favorite
+              = image_tag 'heart-before.svg', alt: 'heart-before'
+              = @product.favorites.count
     
       
       .item-button__right
