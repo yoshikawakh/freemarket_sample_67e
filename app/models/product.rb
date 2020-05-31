@@ -9,6 +9,7 @@ class Product < ApplicationRecord
   has_many :images, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   validates :images, length: { minimum: 1, maximum: 5}
-
   belongs_to :user
+  has_many :favorites, dependent: :destroy
+  has_many :favorites_products, through: :likes, source: :product
 end
