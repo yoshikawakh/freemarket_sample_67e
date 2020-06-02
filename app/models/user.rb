@@ -11,6 +11,7 @@ class User < ApplicationRecord
   validates :first_name, :last_name, presence: true, format: { with: /\A[一-龥ぁ-ん]/}
   validates :first_name_kana, :last_name_kana, presence: true, format: { with: /\A[\p{katakana}\p{blank}ー－]+\z/}
   has_one :address
+  has_many :comments
 
   def self.from_omniauth(auth)
     sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
