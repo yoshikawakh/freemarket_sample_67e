@@ -123,7 +123,6 @@
         .comment
           <コメント一覧>
           .comment__inner
-            /itemに紐づくコメントをコメントテーブルから取り出す
             - @comments.each do |comment|
               .comment__inner__box
                 = link_to comment.user.nickname,user_path,class: "comment__inner__box__name"
